@@ -9,5 +9,15 @@ namespace G26W06WFCounter {
         private void OnAdd(object sender, EventArgs e) {
             labelCount.Text = $"{++count}";
         }
+
+        private void OnSub(object sender, EventArgs e) {
+            if (count > 0) {
+                labelCount.Text = $"{--count}";
+            }
+        }
+
+        private void OnReset(object sender, EventArgs e) {
+            labelCount.Text = $"{count = 0}";
+        }
     }
 }

@@ -25,36 +25,63 @@
         private void InitializeComponent() {
             labelCount = new Label();
             btnAdd = new Button();
+            btnSub = new Button();
+            btnReset = new Button();
             SuspendLayout();
             // 
             // labelCount
             // 
             labelCount.BackColor = SystemColors.Info;
             labelCount.Font = new Font("맑은 고딕", 36F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            labelCount.Location = new Point(12, 9);
+            labelCount.Location = new Point(9, 7);
+            labelCount.Margin = new Padding(2, 0, 2, 0);
             labelCount.Name = "labelCount";
-            labelCount.Size = new Size(378, 238);
+            labelCount.Size = new Size(294, 178);
             labelCount.TabIndex = 0;
             labelCount.Text = "0";
             labelCount.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(12, 272);
+            btnAdd.Location = new Point(9, 204);
+            btnAdd.Margin = new Padding(2);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(378, 67);
+            btnAdd.Size = new Size(294, 50);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "증가";
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += OnAdd;
             // 
+            // btnSub
+            // 
+            btnSub.Location = new Point(9, 259);
+            btnSub.Name = "btnSub";
+            btnSub.Size = new Size(202, 45);
+            btnSub.TabIndex = 2;
+            btnSub.Text = "감소";
+            btnSub.UseVisualStyleBackColor = true;
+            btnSub.Click += OnSub;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(217, 259);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(86, 45);
+            btnReset.TabIndex = 3;
+            btnReset.Text = "초기화";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += OnReset;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(402, 450);
+            ClientSize = new Size(313, 322);
+            Controls.Add(btnReset);
+            Controls.Add(btnSub);
             Controls.Add(btnAdd);
             Controls.Add(labelCount);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -64,5 +91,7 @@
 
         private Label labelCount;
         private Button btnAdd;
+        private Button btnSub;
+        private Button btnReset;
     }
 }
